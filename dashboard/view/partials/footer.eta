@@ -1,0 +1,41 @@
+<% /* ——————————————————————————————————————————————————————
+   * PROJECT: NEZUKO CHAN BOT DASHBOARD FOOTER
+   * MODIFIED BY: TAWHID AHMED (TawHid_Bbz)
+   * —————————————————————————————————————————————————————— */ %>
+</div>
+
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-4 mt-5 border-top mx-4">
+    <div class="col-md-4 d-flex align-items-center">
+        <span class="mb-3 mb-md-0 text-muted fw-bold" id="copy-right"></span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3">
+            <a class="text-pink" href="https://m.facebook.com/suhan420x" target="_blank" title="Follow Suhan">
+                <i class="fs-2 fab fa-facebook"></i>
+            </a>
+        </li>
+        <li class="ms-3">
+            <a class="text-dark" href="#" title="Nezuko Chan Project">
+                <i class="fs-2 fa-solid fa-wand-magic-sparkles"></i>
+            </a>
+        </li>
+    </ul>
+</footer>
+
+<style>
+    .text-pink {
+        color: #ff69b4 !important;
+        transition: 0.3s;
+    }
+    .text-pink:hover {
+        color: #ff1493 !important;
+        transform: scale(1.2);
+    }
+</style>
+
+<script>
+  document.getElementById('copy-right').innerHTML = `&copy; ${new Date().getFullYear()} Nezuko Chan Bot | Developed by <span style="color: #ff69b4;">Tawhid Ahmed</span>`;
+</script>
+</body>
+</html>
