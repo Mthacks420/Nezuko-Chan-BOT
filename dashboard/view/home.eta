@@ -1,0 +1,111 @@
+<%~ includeFile("partials/header.eta", {
+	user: user
+}) %>
+<%~ includeFile("partials/message.eta") %>
+<%~ includeFile("partials/title.eta", {
+	icon: "fas fa-home",
+	title: "Nezuko Home"
+}); %>
+
+<style>
+    .welcome-title {
+        color: #ff69b4;
+        font-weight: 800;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+    .feature-list li {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+</style>
+
+<h1 class="text-center mt-3 welcome-title">Welcome to Nezuko Chan! 🌸</h1>
+
+<ul class="text-center d-block list-unstyled feature-list">
+	<li> <i class="fas fa-user-shield text-primary"></i> Advanced Group Moderation</li>
+	<li> <i class="fas fa-terminal text-success"></i> Custom Commands & Advanced Spoofing</li>
+</ul>
+
+<div class="text-center mb-3">
+<% if (global.botID) { %>
+	<button class="btn btn-phoenix-primary btn-block rounded-5" id="addme">
+		<i class="fab fa-facebook"></i> Add Nezuko to your Group
+	</button>
+<% } else { %>
+	<button class="btn btn-phoenix-danger btn-block rounded-5">
+		<i class="fas fa-ghost"></i> Nezuko is currently resting (Offline)
+	</button>
+<% } %>
+</div>
+
+<hr>
+
+<section id="about" class="py-5" onclick="window.location.href='/dashboard'" style="cursor: pointer;">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 mx-auto text-center">
+				<h2 class="mb-4">Easy to Manage ✨</h2>
+				<p>Personalize your group with custom welcome messages, leave notifications, and more! Nezuko provides the most intuitive dashboard for your community.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="rent-api" class="bg-light py-5" onclick="window.location.href='/dashboard'" style="cursor: pointer;">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 mx-auto text-center">
+				<h2 class="mb-4">Custom Welcome Greetings 🌸</h2>
+				<p>Impress your new members with beautiful welcome cards and rules. Set up your group's unique personality in just a few clicks.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="contact" class="py-5" onclick="window.location.href='/dashboard'" style="cursor: pointer;">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 mx-auto text-center">
+				<h2 class="mb-4">Power of Customization 🛠️</h2>
+				<p>Nezuko Chan gives you total control! Create your own commands and manage your bot exactly how you want it to behave.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="thanks" class="bg-light py-5" onclick="window.location.href='/dashboard'" style="cursor: pointer;">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 mx-auto text-center">
+				<h2 class="mb-4">Leveling & Engagement System 🏆</h2>
+				<p>Reward your most active members with Nezuko's built-in XP and leveling system. Track who's contributing the most to your chat!</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="stats" class="py-5" onclick="window.location.href='/dashboard'" style="cursor: pointer;">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 mx-auto text-center">
+				<h2 class="mb-4">Current Network Status</h2>
+				<p>Nezuko Chan is currently protecting <b><%=global.db.allThreadData.length%> Groups</b> and serving <b><%=global.db.allUserData.length%> Global Users</b>.</p>
+				<p class="small text-muted">Developed with ❤️ by Tawhid Ahmed</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<script type="text/javascript">
+  (function() {
+    const btn = $('#addme');
+		if (btn.length > 0) {
+			btn.on("click", () => {
+				window.open("https://www.facebook.com/" + "<%= global.botID %>", "_blank");
+			});
+		}
+  })();
+</script>
+
+<%~ includeFile('partials/footer.eta') %>

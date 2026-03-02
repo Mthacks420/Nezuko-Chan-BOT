@@ -1,0 +1,110 @@
+<%~ includeFile("partials/header", {
+	user: user
+}); %>
+<%~ includeFile("partials/message.eta"); %>
+<%~ includeFile("partials/title.eta", {
+	icon: "fas fa-chart-line",
+	title: "Nezuko System Statistics"
+}); %>
+
+<style>
+    .stats-card {
+        background: rgba(255, 105, 180, 0.05);
+        border-radius: 15px;
+        padding: 20px;
+        border: 1px solid rgba(255, 105, 180, 0.2);
+    }
+    .table td {
+        padding: 12px;
+        vertical-align: middle;
+        font-weight: 500;
+    }
+    .stats-icon {
+        width: 30px;
+        color: #ff69b4;
+    }
+</style>
+
+<section class="post my-4">
+  <div class="container">
+    <div class="stats-card">
+        <h3 class="text-center mb-4" style="color: #ff69b4;">Core Performance</h3>
+        <table class="table table-borderless">
+          <tbody>
+            <tr class="text-start">
+              <td><i class="fas fa-users stats-icon"></i> Total Users</td>
+              <td>
+                <span class="badge bg-soft-primary text-primary"><%= totalUser %></span>
+              </td>
+            </tr>
+            <tr class="text-start">
+              <td><i class="fas fa-server stats-icon"></i> Active Threads</td>
+              <td>
+                <span class="badge bg-soft-success text-success"><%= totalThread %></span>
+              </td>
+            </tr>
+            <tr class="text-start">
+              <td><i class="fas fa-hashtag stats-icon"></i> System Prefix</td>
+              <td>
+                <code style="color: #ff69b4; font-weight: bold;"><%= prefix %></code>
+              </td>
+            </tr>
+            <tr class="text-start">
+              <td><i class="fa fa-clock stats-icon"></i> System Uptime</td>
+              <td id="uptime" style="font-family: 'Courier New', Courier, monospace; font-weight: bold;">
+                <%= uptime %>
+              </td>
+            </tr>
+            <tr class="text-start">
+              <td><i class="fab fa-node-js stats-icon"></i> Node.js Version</td>
+              <td>
+                <span class="text-muted"><%= process.version %></span>
+              </td>
+            </tr>
+            <tr class="text-start">
+              <td><i class="fa-solid fa-microchip stats-icon"></i> RAM Usage</td>
+              <td>
+                <%= (process.memoryUsage().rss / 1024 / 1024).toFixed(2) %> MB
+              </td>
+            </tr>
+            <tr class="text-start">
+              <td><i class="fa-solid fa-bolt stats-icon"></i> System CPU</td>
+              <td>
+                <%= (process.cpuUsage().system / 1024 / 1024).toFixed(2) %>%
+              </td>
+            </tr>
+            <tr class="text-start">
+              <td><i class="fa-solid fa-gauge-high stats-icon"></i> Nezuko Engine CPU</td>
+              <td>
+                <%= (process.cpuUsage().user / 1024 / 1024).toFixed(2) %>%
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="text-center mt-3">
+            <small class="text-muted">System Managed by Tawhid Ahmed (TawHid_Bbz)</small>
+        </div>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+  // Updated time converter from Vietnamese to English branding
+  function cvt(e, t="s", o="m ", n="h ", r="d ", a="M ", c="y "){
+    const u=Math.floor(e/1e3%60),
+          i=Math.floor(e/1e3/60%60),
+          l=Math.floor(e/1e3/60/60%24),
+          f=Math.floor(e/1e3/60/60/24%30),
+          h=Math.floor(e/1e3/60/60/24/30%12),
+          m=Math.floor(e/1e3/60/60/24/30/12);
+    return `${m?m+c:""}${h?h+a:m?"00"+a:""}${f?f+r:h||m?"00"+r:""}${l?l+n:f||h||m?"00"+n:""}${i?i+o:l||f||h||m?"00"+o:""}${u}${t}`
+  }
+  
+  let countDownDate=Number("<%=uptimeSecond%>");
+  setInterval((function(){
+    countDownDate+=1;
+    document.getElementById("uptime").innerHTML=cvt(1e3*countDownDate);
+  }),1e3);
+</script>
+
+<%~ includeFile("partials/footer") %>
