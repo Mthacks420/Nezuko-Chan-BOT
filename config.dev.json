@@ -26,9 +26,9 @@
     "notes": "If enabled, only IDs in whiteListIds can use the bot"
   },
   "nickNameBot": "Tawhid Er BoW!!🌸😫",
-  "prefix": "!",
+  "prefix": ".",
   "database": {
-    "type": "sqlite",
+    "type": "json",
     "uriMongodb": "",
     "autoSyncWhenStart": false,
     "autoRefreshThreadInfoFirstTime": true,
