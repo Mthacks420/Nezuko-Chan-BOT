@@ -1,0 +1,27 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       🌸 NEZUKO CHAN BOT V3 🌸
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[ 👤 OWNER & MAINTAINER ]
+Maintainer : Tawhid Ahmed (TawHid_Bbz)
+Project    : Nezuko Chan Messenger Bot
+Version    : 1.6.00
+Status     : Premium & Secured
+
+[ 📜 ORIGINAL CREDITS ]
+Core Engine: Goat-Bot-V2
+Original Author: NTKhang (Respect to the creator)
+Source Base: github.com/ntkhang03/Goat-Bot-V2
+
+[ 🛡️ LEGAL NOTICE ]
+This version has been customized and optimized by Tawhid Ahmed. 
+The core framework remains the property of the original author. 
+Please respect the hard work of both the creator and the maintainer.
+
+[ 📢 SUPPORT ]
+Modified for personal use and community stability. 
+Any unauthorized distribution of this modified version is not recommended.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Thank you for using Nezuko Chan Bot! 🦋✨
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

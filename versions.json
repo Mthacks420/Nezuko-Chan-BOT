@@ -1,0 +1,26 @@
+[
+	{
+		"version": "1.0.1",
+		"author": "TawHid_Bbz",
+		"files": {
+			"bot/login/login.js": "fixes terminal freeze"
+		}
+	},
+	{
+		"version": "1.1.40",
+		"author": "TawHid_Bbz",
+		"files": {
+			"scripts/cmds/help.js": "Optimization for faster command loading"
+		}
+	},
+	{
+		"version": "1.6.00",
+		"author": "Tawhid Ahmed",
+		"description": "Premium Nezuko Chan Bot v3.0 | Rebranded and Secured",
+		"files": {
+			"Nezuko.js": "Full logic rebranded",
+			"index.js": "Startup sequence updated",
+			"config.dev.json": "Security and owner emails updated"
+		}
+	}
+]

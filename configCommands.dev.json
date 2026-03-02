@@ -1,0 +1,40 @@
+{
+  "commandBanned": {},
+  "envGlobal": {
+    "weatherApiKey": "d7e795ae6a0d44aaa8abb1a0a7ac19e4",
+    "goatbotApikey": "",
+    "author": "TawHid_Bbz"
+  },
+  "envCommands": {
+    "daily": {
+      "rewardDay1": {
+        "coin": 200,
+        "exp": 20
+      },
+      "rewardFirstDay": {
+        "coin": 200,
+        "exp": 20
+      }
+    },
+    "notification": {
+      "delayPerGroup": 300
+    },
+    "rank": {
+      "deltaNext": 5
+    },
+    "rankup": {
+      "deltaNext": 5
+    },
+    "appstore": {
+      "limitResult": 5
+    },
+    "dhbc": {
+      "reward": 2000
+    }
+  },
+  "envEvents": {
+    "logsbot": {
+      "allow": true
+    }
+  }
+}
